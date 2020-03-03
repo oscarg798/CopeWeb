@@ -1,0 +1,1 @@
+const val BASE_URL = "http://94.237.29.193:3000/"
