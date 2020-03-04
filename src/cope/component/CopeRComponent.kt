@@ -16,22 +16,31 @@ interface CopeProps : RProps {
 class CopeRComponent : RComponent<CopeProps, RState>() {
 
     override fun RBuilder.render() {
-        div(CARD_STYLE_NAME) {
-            val cope = props.cope
-            img(src = cope.icon, classes = LOGO_STYLE_NAME) { }
-            div(TEXT_STYLE_NAME) {
-                a(href = cope.url, target = LINK_TARGET) {
-                    +cope.title
+        val cope = props.cope
+        div(CARD_STYLE) {
+            div(CARD_CONTENT_STYLE){
+                div(LOGO_CONTAINER_STYLE) {
+                    img(src = cope.icon, classes = LOGO_STYLE) { }
+                }
+                div(CONTAINER_CONTAINER_STYLE) {
+                    div(TEXT_STYLE) {
+                        a(href = cope.url, target = LINK_TARGET) {
+                            +cope.title
+                        }
+                    }
                 }
             }
         }
     }
 
     companion object {
-        private const val CARD_STYLE_NAME = "card"
-        private const val LOGO_STYLE_NAME = "logo"
-        private const val TEXT_STYLE_NAME = "text"
+        private const val CARD_STYLE = "card"
+        private const val CARD_CONTENT_STYLE = "row justify-content-start"
+        private const val LOGO_STYLE = "logo"
+        private const val TEXT_STYLE = "text"
         private const val LINK_TARGET = "_blank"
+        private const val LOGO_CONTAINER_STYLE = "col-md-2 logo_container"
+        private const val CONTAINER_CONTAINER_STYLE = "col-md-10"
     }
 }
 
