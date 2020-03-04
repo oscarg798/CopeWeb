@@ -6,11 +6,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class HelloPresenter(private val getCopesInteractor: Interactor<Array<Cope>, Unit>) : HelloContract.Presenter {
+class CopeListPresenter(private val getCopesInteractor: Interactor<Array<Cope>, Unit>) : CopeListContract.Presenter {
 
-    override var view: HelloContract.View? = null
+    override var view: CopeListContract.View? = null
 
-    override fun bind(view: HelloContract.View) {
+    override fun bind(view: CopeListContract.View) {
         this.view = view
         getCopes()
     }

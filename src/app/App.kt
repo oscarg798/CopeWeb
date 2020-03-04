@@ -1,6 +1,6 @@
 package app
 
-import copelist.copeList
+import copelist.component.copeList
 import react.*
 import react.dom.*
 import logo.*

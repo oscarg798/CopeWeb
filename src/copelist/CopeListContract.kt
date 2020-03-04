@@ -3,7 +3,7 @@ package copelist
 import base.BaseContract
 import entities.Cope
 
-interface HelloContract {
+interface CopeListContract {
 
     interface View: BaseContract.BaseView {
 
