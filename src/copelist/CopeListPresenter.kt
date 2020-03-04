@@ -27,6 +27,4 @@ class CopeListPresenter(private val getCopesInteractor: Interactor<Array<Cope>, 
 
         }
     }
-
-
 }
